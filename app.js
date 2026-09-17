@@ -49,6 +49,9 @@
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   function measure() {
+    // Fit the pinned phone inside the space left by the copy on short mobile screens.
+    const phoneSpace = document.querySelector('.story-visual').clientHeight;
+    root.style.setProperty('--mobile-device-scale', clamp((phoneSpace - 24) / 565, .3, .68).toFixed(3));
     const y = window.scrollY;
     bounds = {
       heroHeight: hero.offsetHeight,
