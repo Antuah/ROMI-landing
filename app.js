@@ -13,7 +13,6 @@
     themeToggle.setAttribute('aria-pressed', String(dark));
     themeToggle.setAttribute('aria-label', label);
     themeToggle.title = label;
-    themeToggle.firstElementChild.textContent = dark ? '☀' : '☾';
     document.querySelector('meta[name="theme-color"]').content = dark ? '#18131d' : '#fff5f8';
   }
   applyTheme(savedTheme || (colorPreference.matches ? 'dark' : 'light'));

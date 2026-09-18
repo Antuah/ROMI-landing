@@ -175,3 +175,16 @@ html[data-theme=dark] .skip-link{background:#352336;color:#fff}
 
 /* Keep the greeting above the mascot, with room for both at every size. */
 .hello-note{top:auto;bottom:calc(100% + 12px);transform:none;z-index:1}
+
+/* Real app captures: crop only the surrounding canvas, retaining the supplied phone. */
+.device.screenshot-device{border:0;border-radius:17% / 8%;background:transparent;box-shadow:0 25px 55px -25px #32112655;isolation:isolate}
+.screenshot-device .story-screen{inset:0;overflow:hidden;border-radius:inherit;background:transparent}
+.app-capture{position:absolute;max-width:none;width:130.66%;height:120.47%;left:-15.09%;top:-11.88%;object-fit:fill}
+.capture-estadisticas{width:120.33%;height:115.06%;left:-10.05%;top:-10.34%}
+.icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.75}
+.metric-icon .icon{width:24px;height:24px}.metric-icon{display:grid;place-items:center}
+.theme-toggle .icon{width:22px;height:22px}.theme-toggle>span{display:flex}
+.theme-toggle .icon-sun,html[data-theme=dark] .theme-toggle .icon-moon{display:none}
+html[data-theme=dark] .theme-toggle .icon-sun{display:block}
+.integration-label>.icon{fill:none;stroke:currentColor}
+.closing-word .icon{width:.8em;height:.8em;stroke-width:1.2}

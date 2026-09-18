@@ -12,3 +12,8 @@ Use case: identity-preserve. Asset: transparent cutout of ROMI for her health co
 
 - `assets/romi-credencial-transparente.png`: ROMI con credencial, PNG transparente proporcionado por el usuario, sin modificaciones.
 - `assets/romi-notas-transparente.png`: ROMI tomando notas, PNG transparente proporcionado por el usuario, sin modificaciones.
+
+## Capturas actuales e iconos
+
+- `assets/app-*.png`: capturas proporcionadas por el usuario el 18 de septiembre de 2026, sin modificar; el encuadre se ajusta con CSS. Para expediente se utiliza la cuarta captura de la serie.
+- Iconos SVG integrados de Heroicons v2.2.0 (https://github.com/tailwindlabs/heroicons), licencia MIT en `assets/heroicons-LICENSE.txt`.
