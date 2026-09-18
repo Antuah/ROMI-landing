@@ -114,3 +114,61 @@ html:not(.js-ready) .story{height:auto;min-height:0}html:not(.js-ready) .story-s
   .motion-ready .tag-bottom{bottom:28px}
   .motion-ready .demo-caption{bottom:0}
 }
+
+/* Page theme; the illustrative app screens keep their own original palette. */
+:root{color-scheme:light}
+.header{gap:18px}.header nav{gap:22px}
+.theme-toggle{width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line);border-radius:50%;background:transparent;display:grid;place-items:center;color:var(--ink);font-size:23px;line-height:1;transition:background .2s}
+.theme-toggle:hover{background:#f7dce7}
+.footer-about{font-size:13px;font-weight:700;color:var(--pink);white-space:nowrap}
+html[data-theme=dark]{color-scheme:dark;--ink:#f7eef5;--muted:#c4b5c3;--blush:#211823;--line:#473443;--pink:#ff8bb6;--pink-deep:#ffabc9}
+html[data-theme=dark] body{background:#18131d}
+html[data-theme=dark] .header.scrolled{background:#1b151fee;border-color:#42303f}
+html[data-theme=dark] .mobile-menu:not([hidden]){background:#231a28;border-color:#493645}
+html[data-theme=dark] .menu-toggle span{background:var(--ink)}
+html[data-theme=dark] .theme-toggle:hover{background:#44303f}
+html[data-theme=dark] .button{background:#ffb4d0;color:#301525}
+html[data-theme=dark] .button:hover{background:#ffcee0}
+html[data-theme=dark] .button-light{background:#fff;color:#a9174d}
+html[data-theme=dark] .hero .eyebrow{background:#412535;color:#ffb2ce}
+html[data-theme=dark] .hero-orbit{border-color:#513042}
+html[data-theme=dark] .floating-card{background:#2b202e;border-color:#513948}
+html[data-theme=dark] .floating-card img{mix-blend-mode:normal;background:#fff;border-radius:50%}
+html[data-theme=dark] .hello-note{background:#342332;border-color:#654455}
+html[data-theme=dark] .story,html[data-theme=dark] .companion{background:#221924}
+html[data-theme=dark] .story-halo{background:#4d293f}
+html[data-theme=dark] .story[data-active='1'] .story-halo{background:#3d2d53}
+html[data-theme=dark] .story[data-active='2'] .story-halo{background:#503b32}
+html[data-theme=dark] .story-tag{background:#352536;border-color:#664658;color:#f9eaf4}
+html[data-theme=dark] .chapter-nav button{color:#b8a0b2}
+html[data-theme=dark] .chapter-nav button.active{color:var(--pink)}
+html[data-theme=dark] .chapter-nav i{background:#654353}
+html[data-theme=dark] .feature-note,html[data-theme=dark] .story-copy>.eyebrow,html[data-theme=dark] .section-heading>.eyebrow,html[data-theme=dark] .companion-heading .eyebrow,html[data-theme=dark] .faq-heading .eyebrow{color:#d5a7bf}
+html[data-theme=dark] .stage-caption,html[data-theme=dark] .demo-caption,html[data-theme=dark] .scroll-cue{color:#bd9daf}
+html[data-theme=dark] .hydration{background:#1c352c}
+html[data-theme=dark] .rest{background:#30233f}
+html[data-theme=dark] .movement{background:#3c2b21}
+html[data-theme=dark] .habit-card>p,html[data-theme=dark] .habit-top>span:last-child{color:#c9bfc8}
+html[data-theme=dark] .water-number{color:#8cd8b7}
+html[data-theme=dark] .water-number>span,html[data-theme=dark] .hydration .habit-chip{color:#a8d8c0}
+html[data-theme=dark] .rest-number{color:#dcc2f5}
+html[data-theme=dark] .rest-number small,html[data-theme=dark] .rest .habit-chip{color:#c9b1e1}
+html[data-theme=dark] .movement-visual strong{color:#ffc397}
+html[data-theme=dark] .movement-visual>div>span{color:#d7b597}
+html[data-theme=dark] .ring-track{stroke:#60422e}
+html[data-theme=dark] .ring-fill{stroke:#efab74}
+html[data-theme=dark] .habit-chip{border-color:#5a7266}
+html[data-theme=dark] .rest .habit-chip{border-color:#756089}
+html[data-theme=dark] .integration-copy>p{color:#c1b0bd}
+html[data-theme=dark] .integration-mascot{background:#fff;border-radius:18px}
+html[data-theme=dark] .companion-image img{mix-blend-mode:normal;background:#fff7fa;border-radius:24px}
+html[data-theme=dark] .companion-note{background:#3c2636;border-color:#735164}
+html[data-theme=dark] .companion-copy>p.medical-note{color:#c8b0be;border-color:#77536a}
+html[data-theme=dark] .faq-items summary>span{color:#dbadC6}
+html[data-theme=dark] footer{background:#18131d}
+html[data-theme=dark] footer p,html[data-theme=dark] footer .footer-brand>span,html[data-theme=dark] footer>a:last-child{color:#c4acbe}
+html[data-theme=dark] .skip-link{background:#352336;color:#fff}
+.device{--ink:#201a23;--muted:#736b76;--pink:#e0296a;--pink-deep:#b91654;color:#201a23;color-scheme:light}
+@media(min-width:801px) and (max-width:1050px){.header{gap:12px;padding-left:3vw;padding-right:3vw}.header nav{gap:13px}.header nav a{font-size:12px}.header>.button{font-size:11px;gap:10px;padding:11px 14px}.header .brand,.brand img{width:100px}}
+@media(max-width:800px){.header{gap:9px}.header>.button{margin-right:0}.theme-toggle{width:36px;height:36px;flex-basis:36px;font-size:21px}}
+@media(max-width:560px){.header{gap:7px}.header>.button{display:none}.theme-toggle{margin-left:auto;width:40px;height:40px;flex-basis:40px}.menu-toggle{width:40px}.mobile-menu a{min-height:44px}footer .footer-about{grid-column:1;grid-row:3}footer>a:last-child{grid-column:2;grid-row:3}footer p{grid-row:2}}

@@ -11,8 +11,16 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
   <link rel="preload" as="image" href="./assets/romi-saludo.png">
-  <link rel="stylesheet" href="./styles.css?v=20260917">
-  <script src="./app.js?v=20260917" defer></script>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('romi-theme'); } catch {}
+      if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="./styles.css?v=20260917-theme">
+  <script src="./app.js?v=20260917-theme" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -23,10 +31,12 @@
       <a href="#conoce">Conoce a ROMI</a>
       <a href="#habitos">Tu día a día</a>
       <a href="#preguntas">Preguntas</a>
+      <a href="https://romiai.com.mx/es">Quiénes somos</a>
     </nav>
     <a class="button button-small" href="#contacto">Quiero conocer ROMI <span aria-hidden="true">↗</span></a>
+    <button class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false" title="Activar modo oscuro"><span aria-hidden="true">☾</span></button>
     <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button>
-    <div id="mobile-menu" class="mobile-menu" hidden><a href="#conoce">Conoce a ROMI</a><a href="#habitos">Tu día a día</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></div>
+    <div id="mobile-menu" class="mobile-menu" hidden><a href="#conoce">Conoce a ROMI</a><a href="#habitos">Tu día a día</a><a href="#preguntas">Preguntas</a><a href="https://romiai.com.mx/es">Quiénes somos</a><a href="#contacto">Contacto</a></div>
   </header>
 
   <main id="contenido">
@@ -123,6 +133,6 @@
 
     <section class="contact section-pad" id="contacto" aria-labelledby="contact-title"><div class="contact-glow" aria-hidden="true"></div><p class="eyebrow reveal">UNA CONVERSACIÓN PUEDE SER EL COMIENZO</p><h2 class="reveal" id="contact-title">Tu salud, tu historia.<br> <span>Y ROMI, contigo.</span></h2><p class="reveal">Descubre una forma más cercana de cuidar de ti.</p><a class="button button-light reveal" href="mailto:contacto@romiai.com.mx?subject=Quiero%20conocer%20ROMI">Quiero conocer ROMI <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:contacto@romiai.com.mx">contacto@romiai.com.mx</a><div class="closing-word" aria-hidden="true">ROMI<span>♡</span></div></section>
   </main>
-  <footer><a class="footer-brand" href="#inicio">ROMI<span>Tu salud, contigo.</span></a><p>Orientación que acompaña. La atención médica es con tu profesional de salud.</p><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></footer>
+  <footer><a class="footer-brand" href="#inicio">ROMI<span>Tu salud, contigo.</span></a><p>Orientación que acompaña. La atención médica es con tu profesional de salud.</p><a class="footer-about" href="https://romiai.com.mx/es">Quiénes somos ↗</a><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>

@@ -1,6 +1,30 @@
 (() => {
   'use strict';
   const root = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const colorPreference = window.matchMedia('(prefers-color-scheme: dark)');
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('romi-theme'); } catch {}
+  if (!['dark', 'light'].includes(savedTheme)) savedTheme = null;
+  function applyTheme(theme) {
+    root.dataset.theme = theme;
+    const dark = theme === 'dark';
+    const label = dark ? 'Activar modo claro' : 'Activar modo oscuro';
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeToggle.setAttribute('aria-label', label);
+    themeToggle.title = label;
+    themeToggle.firstElementChild.textContent = dark ? '☀' : '☾';
+    document.querySelector('meta[name="theme-color"]').content = dark ? '#18131d' : '#fff5f8';
+  }
+  applyTheme(savedTheme || (colorPreference.matches ? 'dark' : 'light'));
+  themeToggle.addEventListener('click', () => {
+    savedTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('romi-theme', savedTheme); } catch {}
+    applyTheme(savedTheme);
+  });
+  colorPreference.addEventListener('change', event => {
+    if (!savedTheme) applyTheme(event.matches ? 'dark' : 'light');
+  });
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const header = document.querySelector('.header');
   const hero = document.querySelector('.hero');
