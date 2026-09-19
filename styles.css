@@ -179,8 +179,8 @@ html[data-theme=dark] .skip-link{background:#352336;color:#fff}
 /* Real app captures: crop only the surrounding canvas, retaining the supplied phone. */
 .device.screenshot-device{border:0;border-radius:17% / 8%;background:transparent;box-shadow:0 25px 55px -25px #32112655;isolation:isolate}
 .screenshot-device .story-screen{inset:0;overflow:hidden;border-radius:inherit;background:transparent}
-.app-capture{position:absolute;max-width:none;width:130.66%;height:120.47%;left:-15.09%;top:-11.88%;object-fit:fill}
-.capture-estadisticas{width:120.33%;height:115.06%;left:-10.05%;top:-10.34%}
+.app-capture{position:absolute;max-width:none;width:194.48%;height:120.83%;left:-47.38%;top:-12.01%;object-fit:fill}
+.capture-estadisticas,.capture-expediente{width:186.82%;height:115.80%;left:-43.48%;top:-10.73%}
 .icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.75}
 .metric-icon .icon{width:24px;height:24px}.metric-icon{display:grid;place-items:center}
 .theme-toggle .icon{width:22px;height:22px}.theme-toggle>span{display:flex}

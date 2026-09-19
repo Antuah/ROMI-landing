@@ -17,3 +17,7 @@ Use case: identity-preserve. Asset: transparent cutout of ROMI for her health co
 
 - `assets/app-*.png`: capturas proporcionadas por el usuario el 18 de septiembre de 2026, sin modificar; el encuadre se ajusta con CSS. Para expediente se utiliza la cuarta captura de la serie.
 - Iconos SVG integrados de Heroicons v2.2.0 (https://github.com/tailwindlabs/heroicons), licencia MIT en `assets/heroicons-LICENSE.txt`.
+
+## Capturas de mayor resolución
+
+Las cuatro imágenes `assets/app-*.png` se sustituyeron por los originales de 2318 × 3000 px entregados por el usuario: 1 = Expediente, 2 = Inicio, 3 = Chat, 4 = Estadísticas. Se conservan los PNG sin reducción de calidad y se ajusta el encuadre con CSS.
